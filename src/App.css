@@ -22,16 +22,33 @@ h2{ font-size: 4rem; }
 h3 { font-size: 3rem; }
 h4 { font-size: 2rem; }
 
+.module {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+ }
+
+ .module .box {
+  padding: 0px 50px;
+  width: calc(50% - 100px);
+ }
+
 .rule {
   background: #d1fdb1;
   width: 42px;
   height: 4px;
-  margin: 75px 0px;
+  margin: 75px auto;
+}
+
+p.tight {
+  margin: 0px;
 }
 
 a { color: #d1fdb1; }
 
-a.button { border: 1px solid #d1fdb1; padding: 6px 12px; text-decoration: none;}
+a.button { font-family: 't26-carbon', monospace; border: 1px solid #d1fdb1; padding: 12px 18px; text-decoration: none; text-transform:uppercase; letter-spacing: 0.05em;}
+a.button:hover { background: #d1fdb1; color: #282828;}
 
 .tag {
   max-width: 420px;
@@ -41,6 +58,8 @@ a.button { border: 1px solid #d1fdb1; padding: 6px 12px; text-decoration: none;}
   justify-content: center;
   padding: 25px;
   margin: 0 auto;
+  min-height: 100vh;
+  background-color: #282828;
 }
 
 .tag h2 {
@@ -61,57 +80,54 @@ a.button { border: 1px solid #d1fdb1; padding: 6px 12px; text-decoration: none;}
 
 .manifest h3 { padding-left: 50px;}
 
-.manifest .module .box {
-  padding: 0px 50px;
-  width: calc(50% - 100px);
-}
-
 .App-header {
-  min-height: 100vh;
-  font-size: calc(10px + 2vmin);
-  padding: 25px;
   font-family: 't26-carbon', monospace;
   background-color: #d1fdb1;
+  background-size: cover;
+  background-position: center top;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .border { 
-  border: 1px solid #282828;
+  /* border: 1px solid #282828;
+  padding: 50px; */
+  width: max-content;
+  background: linear-gradient(90deg, #282828 50%, transparent 50%), linear-gradient(90deg, #282828 50%, transparent 50%), linear-gradient(0deg, #282828 50%, transparent 50%), linear-gradient(0deg, purple 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 15px 1px, 15px 1px, 1px 15px, 1px 15px;
   padding: 50px;
-  width: calc(100% - 100px);
-  min-height: calc(100vh - 75px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-size: cover;
-  background-position: center top;
+  animation: border-dance 8s infinite linear;
+}
+@keyframes border-dance {
+  0% {
+    background-position: 0 0, 100% 100%, 0 100%, 100% 0;
+  }
+  100% {
+    background-position: 100% 0, 0 100%, 0 0, 100% 100%;
+  }
 }
 
 .matter {
-  margin: 25px auto;
   border: 1px solid #d1fdb1;
-  padding: 35px;
+  padding: 50px;
+  margin-bottom: 50px;
  }
  
  .matter-img {
-   max-width: 520px;
    width: 100%;
  }
  
  .button-row {
-  margin-top: 25px;
-   display: flex;
-   justify-content: center;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
  }
 
- .module {
-  display: flex;
-  flex-wrap: wrap;
- }
 
- .module .box {
-  width: 50%;
- }
 
 @keyframes App-logo-spin {
   from {
@@ -119,5 +135,17 @@ a.button { border: 1px solid #d1fdb1; padding: 6px 12px; text-decoration: none;}
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .module .box {
+    padding: 0px 35px;
+    width: calc(100% - 70px);
+  }
+
+  .matter {
+    margin: 50px;
+    padding: 50px;
   }
 }
