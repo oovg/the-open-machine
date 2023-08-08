@@ -31,7 +31,6 @@ function App() {
       </div>
 
       <div className="manifest">
-        <h3>MANIFEST</h3>
         <div className="module">
           <div className="box">
             <p>It’s a bit of folk knowledge, well known in the exterior, that the ones who seek totalizing systems are the ones most excluded from the touch of completion. A preliminary definition of truth for the modern age might be: that which an institution cannot see. Because the project of administration, the distance of the template, has to be blind to the singularities - the traces of difference and happenstance which contain in their roughness the strange wholeness of the world. The secrets of the outside.</p>
