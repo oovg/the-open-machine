@@ -90,7 +90,7 @@ function App() {
         </div>
         </div>
       </div>
-      <div className="">
+      <div className="column">
         <div className="matter">
       <h4><i>The Open Machine #2</i></h4>
         <div className="rule" style={{textAlign: "center"}} />
@@ -103,9 +103,7 @@ function App() {
         <div className="button-row">
           <a
             className="matter-link"
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/"
             style={{marginRight: 12}}
           >
             Coming Soon
